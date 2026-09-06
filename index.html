@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+          <h1>Strong Password Generator</h1>
+          <p>Generate strong, random passwords with<span> one click!</span></p>
+        </div>
+       <div class="display">
+          <div class="section-password">
+           <div class="password-box">
+             <input type="text" id="password" placeholder="Click the button to start">
+             <img src="copy.png" alt="Copy" id="Copy-button" onclick="copyPassword()">
+           </div>
+          </div>
+          <div class="section-length box">
+           <div class="length-box">
+             <span>Password Length :</span>
+             
+             <input type="number" id="length" value="12" >
+             
+           </div>
+          </div>
+          <div class="section-strength"> 
+           <div id="strength">Strength : Strong</div>
+           <div class="strength-bar">
+             <div class="strength-fill" ></div>
+           </div>
+          </div>
+           
+           <div class="settings">
+             <div class="section-checkbox1">
+               <label>
+                 <input type="checkbox" id="default" checked onchange="toggleDefault()"> Default
+               </label>
+             </div>
+             <div class="section-checkbox2">
+               <label>
+                 <input type="checkbox" id="number" checked> Numbers
+               </label>
+             </div>
+             <div class="section-checkbox3">
+               <label>
+                 <input type="checkbox" id="uppercase" checked> Uppercase
+               </label>
+             </div>
+             <div class="section-checkbox4">
+               <label>
+                 <input type="checkbox" id="symbol" checked> Symbols
+               </label>
+             </div>
+             <div class="section-checkbox5">
+               <label>
+                 <input type="checkbox" id="lowercase" checked> Lowercase 
+               </label>
+             </div>
+            </div>
+          <div class="section-button">
+            <button onclick="createPassword()"><img src="generate.png">Generate</button>
+          </div>
+        </div> 
+      </div> 
+<script src="script.js"></script>
+</body>
+</html>
